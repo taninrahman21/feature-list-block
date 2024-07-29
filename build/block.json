@@ -1,0 +1,282 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "b-blocks/feature-list",
+  "version": "1.0.0",
+  "title": "Block Name",
+  "category": "widgets",
+  "description": "Short description of the block",
+  "keywords": [
+    "key1",
+    "key2",
+    "key3",
+    "key4",
+    "key5"
+  ],
+  "textdomain": "b-blocks",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": ""
+    },
+    "items": {
+      "type": "array",
+      "default": [
+        {
+          "icon": {
+            "type": "image",
+            "imgUrl": "http://localhost/tanin-wp/wp-content/uploads/2024/04/favicon.svg",
+            "svgIcon": {
+              "url": ""
+            },
+            "iconColor": "",
+            "bgColor": "",
+            "hoverBg": ""
+          },
+          "title": {
+            "text": "Feature Item One",
+            "link": "",
+            "openNewTab": false
+          },
+          "description": "This is the description of Feature Item One. And this is the very short description of Feature Item One."
+        },
+        {
+          "icon": {
+            "type": "image",
+            "imgUrl": "http://localhost/tanin-wp/wp-content/uploads/2024/04/favicon.svg",
+            "svgIcon": {
+              "url": ""
+            },
+            "iconColor": "",
+            "bgColor": "",
+            "hoverBg": ""
+          },
+          "title": {
+            "text": "Feature Item Two",
+            "link": "",
+            "openNewTab": false
+          },
+          "description": "This is the description of Feature Item Two. And this is the very short description of Feature Item Two."
+        }
+      ]
+    },
+    "valueForEachItem": {
+      "type": "object",
+      "default": {
+        "titleTag": "H3",
+        "showIcon": true,
+        "iconShape": "square",
+        "iconPosition": "left",
+        "iconVerticallyCenter": true,
+        "showConnectorLine": true,
+        "connectorLineColor": "black",
+        "connectorLineWidth": 1,
+        "useInlineFeatures": false,
+        "itemsPerLine": {
+          "desktop": 3,
+          "tablet": 2,
+          "mobile": 1
+        },
+        "gapBetweenItem": {
+          "desktop": 20,
+          "tablet": 20,
+          "mobile": 20
+        }
+      }
+    },
+    "itemStyles": {
+      "type": "object",
+      "default": {
+        "padding": {
+          "desktop": {
+            "top": "10px",
+            "right": "10px",
+            "bottom": "10px",
+            "left": "10px"
+          },
+          "tablet": {
+            "top": "10px",
+            "right": "10px",
+            "bottom": "10px",
+            "left": "10px"
+          },
+          "mobile": {
+            "top": "10px",
+            "right": "10px",
+            "bottom": "10px",
+            "left": "10px"
+          }
+        },
+        "spaceBetweenItem": {
+          "desktop": 16,
+          "tablet": 16,
+          "mobile": 16
+        },
+        "addBorder": true,
+        "border": {
+          "width": "0px",
+          "style": "solid",
+          "color": "rgba(0, 0, 0, 0.1)"
+        },
+        "borderRadius": 0,
+        "backgroundColor": {
+          "color": "#F9F9F9"
+        }
+      }
+    },
+    "iconStyle": {
+      "type": "object",
+      "default": {
+        "backgroundFor": "normal",
+        "normalBackground": {
+          "color": "white"
+        },
+        "hoverBackground": {
+          "color": ""
+        },
+        "iconColor": "#2e2424",
+        "iconColorHover": "",
+        "iconDivSize": {
+          "desktop": 50,
+          "tablet": 40,
+          "mobile": 35
+        },
+        "iconSize": {
+          "desktop": 50,
+          "tablet": 40,
+          "mobile": 35
+        },
+        "padding": {
+          "desktop": {
+            "top": "10px",
+            "right": "10px",
+            "bottom": "10px",
+            "left": "10px"
+          },
+          "tablet": {
+            "top": "10px",
+            "right": "10px",
+            "bottom": "10px",
+            "left": "10px"
+          },
+          "mobile": {
+            "top": "10px",
+            "right": "10px",
+            "bottom": "10px",
+            "left": "10px"
+          }
+        },
+        "spaceFromContent": {
+          "desktop": 10,
+          "tablet": 10,
+          "mobile": 10
+        },
+        "borderControl": {
+          "width": "1px",
+          "color": "rgba(18, 235, 195, 1)",
+          "style": "inset"
+        },
+        "borderRadius": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      }
+    },
+    "title": {
+      "type": "object",
+      "default": {
+        "bottomSpace": {
+          "desktop": 0,
+          "tablet": 0,
+          "mobile": 0
+        },
+        "color": "black",
+        "hoverColor": "",
+        "typo": {
+          "fontSize": 25,
+          "fontFamily": "Roboto Mono",
+          "fontCategory": "monospace"
+        }
+      }
+    },
+    "description": {
+      "type": "object",
+      "default": {
+        "color": "gray",
+        "typo": {
+          "fontSize": 16,
+          "fontFamily": "Roboto Mono",
+          "fontCategory": "monospace"
+        }
+      }
+    },
+    "contentBox": {
+      "type": "object",
+      "default": {
+        "contentBoxStyleFor": "normal",
+        "normalBackground": {
+          "color": ""
+        },
+        "hoverBackground": {
+          "color": ""
+        },
+        "hoverBorder": {
+          "width": {
+            "desktop": {},
+            "tablet": {},
+            "mobile": {}
+          },
+          "style": "none",
+          "color": "none"
+        },
+        "normalBorder": {
+          "width": {
+            "desktop": {},
+            "tablet": {},
+            "mobile": {}
+          },
+          "style": "none",
+          "color": ""
+        },
+        "normalBorderRadius": {
+          "desktop": {},
+          "tablet": {},
+          "mobile": {}
+        },
+        "hoverBorderRadius": {
+          "desktop": {},
+          "tablet": {},
+          "mobile": {}
+        },
+        "backgroundTransition": 0,
+        "borderTransition": 0,
+        "borderRadiusTransition": 0,
+        "padding": {
+          "desktop": {},
+          "tablet": {},
+          "mobile": {}
+        },
+        "boxShadowNormal": {},
+        "boxShadowHover": {},
+        "boxShadowTransition": 0
+      }
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {}
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}
