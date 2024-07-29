@@ -1,25 +1,50 @@
-const BlockName = ({ attributes }) => {
-	const { items, columns, layout, content, icon, img } = attributes;
+import { useState } from 'react';
+import FeatureList from '../Common/FeatureList';
 
-	return <div className={`bBlocksBlockName columns-${columns.desktop} columns-tablet-${columns.tablet} columns-mobile-${columns.mobile} ${layout || 'vertical'}`}>
-		{items?.map((item, index) => {
-			const { number, text } = item;
 
-			return <div key={index} id={`bBlocksBlockNameItem-${index}`}>
-				<div className='bBlocksBlockNameItem'>
-					<span className='number'>{number}</span>
-					<span className='text' dangerouslySetInnerHTML={{ __html: text }} />
-				</div>
-			</div>;
-		})}
 
-		{content && <p className='content' dangerouslySetInnerHTML={{ __html: content }} />}
+const FeatureListFront = ({ attributes, id }) => {
+	const { valueForEachItem } = attributes;
+	const [activeFeature, setActiveFeature] = useState(0);
 
-		{img?.url && <img src={img.url} alt={img?.alt} />}
 
-		{icon?.class && <i className={`icon ${icon.class}`}></i>}
+	const renderTitleEl = (item) => {
+		if (!item.title.text) {
+			return null;
+		}
 
-		<span className='separator'></span>
-	</div>
+		return (
+			<valueForEachItem.titleTag
+				className="title"
+				{...(item.title.link ? {
+					onClick: () => window.open(`${item.title.link}`, item.title?.openNewTab ? '_blank' : '_self'),
+					href: item.title.link // Add href for the 'a' tag
+				} : {})}
+			>
+				{item.title.text}
+			</valueForEachItem.titleTag>
+		);
+	};
+
+	const renderDescriptionEl = (item) => {
+		if (!item.description) {
+			return null;
+		}
+		return (
+			<p className="description">{item.description}</p>
+		);
+	};
+
+	return (
+		<>
+			<FeatureList
+				id={id}
+				attributes={attributes}
+				setActiveFeature={setActiveFeature}
+				titleElement={(item) => renderTitleEl(item)}
+				descriptionEl={(item) => renderDescriptionEl(item)}
+			/>
+		</>
+	);
 }
-export default BlockName;
+export default FeatureListFront;

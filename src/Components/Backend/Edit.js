@@ -55,7 +55,7 @@ const Edit = props => {
 	return <>
 		<Settings attributes={attributes} setAttributes={setAttributes} activeFeature={activeFeature} setActiveFeature={setActiveFeature} />
 
-		<div {...useBlockProps()} style={{ border: "2px solid orangered" }}>
+		<div {...useBlockProps()}>
 			<Style attributes={attributes} id={`block-${clientId}`} />
 
 			<FeatureList

@@ -10823,10 +10823,7 @@ const Edit = props => {
     activeFeature: activeFeature,
     setActiveFeature: setActiveFeature
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(),
-    style: {
-      border: "2px solid orangered"
-    }
+    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)()
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Components_Common_Style__WEBPACK_IMPORTED_MODULE_5__["default"], {
     attributes: attributes,
     id: `block-${clientId}`
@@ -30537,7 +30534,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/tru
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkplugin_slug"] = globalThis["webpackChunkplugin_slug"] || [];
+/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkfeature_list"] = globalThis["webpackChunkfeature_list"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
